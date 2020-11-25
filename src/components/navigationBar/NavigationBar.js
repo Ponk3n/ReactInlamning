@@ -19,10 +19,10 @@ export const NavigationBar = () => {
 
     return (
         <div className="navigationBarWrapper">
-            <a href="javascript:;" onClick={() => history.push(RoutingPath.HomeView)}>
+            <a href="#" onClick={() => history.push(RoutingPath.HomeView)}>
                 <h1>Skynet</h1>
-                {displayUserIfAuthenticated()}
             </a>
+            {displayUserIfAuthenticated()}
         </div>
     )
 }

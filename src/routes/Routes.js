@@ -8,7 +8,7 @@ import { UserContext } from '../shared/provider/UserProvider'
 import RoutingPath from './RoutingPath'
 import BrowserCache from '../shared/utils/BrowserCache'
 
-export const Routers = (props) => {
+export const Routes = (props) => {
     const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext)
 
     const blockRouteIfNotAuthenticated = (navigateToView) => {

@@ -2,12 +2,13 @@
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     background-color: darkgrey;
-    padding: 2%;
+    padding: 1%;
 }
 
 .signIn {
     cursor: pointer;
-    grid-column: 9/11;
+    grid-column: 8/11;
     justify-self: center;
     align-self: center;
+    background-color: limegreen;
 }
