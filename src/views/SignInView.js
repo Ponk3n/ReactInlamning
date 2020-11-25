@@ -1,0 +1,29 @@
+import React from 'react'
+import { UserContext } from '../shared/provider/UserProvider'
+import { useHistory } from 'react-router-dom'
+import RoutingPath from '../routes/RoutingPath'
+import BrowserCache from '../shared/utils/BrowserCache'
+
+export const SignInView = () => {
+    const history = useHistory()
+    const [username, setUsername] = useState()
+    const [, setAuthenticatedUser] = useContext(UserContext)
+
+    const login = (e) => {
+        e.preventDefault()
+        setAuthenticatedUser(username)
+        localStorage.setItem(BrowserCache.username, username)
+        history.push(RoutingPath.HomeView)
+    }
+
+    return (
+        <div>
+            <form>
+                <span>Username: </span>
+                <input onChange={(event) => setUsername(event.target.value)} />
+                <br />
+                <button onClick={(e) => login(e)}>Login</button>
+            </form>
+        </div>
+    )
+}
